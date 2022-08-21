@@ -16,7 +16,6 @@ use LINE\LINEBot;
 |
 */
 
-Route::get('/webhook', [LineBotController::class, 'testReply']);
 Route::post('/webhook', [LineBotController::class, 'reply']);
 $httpClient = new CurlHTTPClient($_ENV['LINE_CHANNEL_ACCESS_TOKEN']);
  $bot = new LINEBot($httpClient, ['channelSecret' => $_ENV['LINE_CHANNEL_SECRET']]);
